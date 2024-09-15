@@ -36,11 +36,19 @@ const sliderLocation = document.getElementById('slider-location');
 const sliderLocationDetails = document.getElementById('slider-location-details');
 const prevBtn = document.getElementById('prev-btn');
 const nextBtn = document.getElementById('next-btn');
+const dots = document.querySelectorAll('.dot');
 
 function updateSlider() {
     sliderImage.src = images[currentIndex];
     sliderLocation.textContent = aboutLocation[currentIndex].name
     sliderLocationDetails.textContent = aboutLocation[currentIndex].details
+
+    dots.forEach((dot, index) => {
+        dot.classList.remove('active');
+        if (index === currentIndex) {
+            dot.classList.add('active');
+        }
+    })
 }
 
 nextBtn.addEventListener('click', () => {
