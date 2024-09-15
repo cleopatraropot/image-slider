@@ -7,7 +7,7 @@
 .slider {
   position: relative;
   max-width: 100%;
-  max-height: 500px;
+  max-height: 700px;
   overflow: hidden;
 }
 
@@ -26,6 +26,9 @@ button {
   border: none;
   padding: 10px;
   cursor: pointer;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
 }
 
 #prev-btn {
@@ -34,4 +37,16 @@ button {
 
 #next-btn {
   right: 45%;
+}
+
+.text-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+#slider-location-details {
+  width: 600px;
 }
